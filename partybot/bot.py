@@ -49,17 +49,25 @@ import pypresence
 
 class PartyBot(commands.Bot):
     def __init__(self, settings: BotSettings, device_auths: DeviceAuths) -> None:
-        self.device_auths = device_auths.get_device_auth()
+        self.device_auths = device_auths
         self.settings = settings
 
         self.fortnite_api = FortniteAPIAsync.APIClient()
 
+        account_device_auths = self.device_auths.get_device_auth(
+            email=settings.email
+        )
+
         super().__init__(
             command_prefix='!',
-            auth=fortnitepy.DeviceAuth(
-                device_id=self.device_auths.device_id,
-                account_id=self.device_auths.account_id,
-                secret=self.device_auths.secret
+            auth=fortnitepy.AdvancedAuth(
+                email=self.settings.email,
+                password=self.settings.password,
+                prompt_authorization_code=True,
+                delete_existing_device_auths=True,
+                device_id=account_device_auths.device_id,
+                account_id=account_device_auths.account_id,
+                secret=account_device_auths.secret
             ),
             status=self.settings.status,
             platform=fortnitepy.Platform(self.settings.platform)
@@ -91,10 +99,10 @@ class PartyBot(commands.Bot):
                 outfit = self.party.me.outfit
 
             await rpc.update(
-                details=f"Logged in as {self.user.display_name}. Furdox's version",
+                details=f"Logged in as {self.user.display_name}.",
                 state=f"{self.party.leader.display_name}'s party.",
                 large_image="skull_trooper",
-                large_text="tiny.cc/po",
+                large_text="discord.gg/fnpy",
                 small_image="outfit",
                 small_text=outfit,
                 start=int(start_time),

@@ -155,8 +155,8 @@ class CosmeticCommands(commands.Cog):
     async def pickaxe(self, ctx: fortnitepy.ext.commands.Context, *, content: str) -> None:
         try:
             cosmetic = await self.bot.fortnite_api.cosmetics.get_cosmetic(
-                lang="en",
-                searchLang="en",
+                lang="fr",
+                searchLang="fr",
                 matchMethod="contains",
                 name=content,
                 backendType="AthenaPickaxe"
@@ -179,8 +179,8 @@ class CosmeticCommands(commands.Cog):
     async def pet(self, ctx: fortnitepy.ext.commands.Context, *, content: str) -> None:
         try:
             cosmetic = await self.bot.fortnite_api.cosmetics.get_cosmetic(
-                lang="en",
-                searchLang="en",
+                lang="fr",
+                searchLang="fr",
                 matchMethod="contains",
                 name=content,
                 backendType="AthenaPetCarrier"
@@ -203,8 +203,8 @@ class CosmeticCommands(commands.Cog):
     async def emoji(self, ctx: fortnitepy.ext.commands.Context, *, content: str) -> None:
         try:
             cosmetic = await self.bot.fortnite_api.cosmetics.get_cosmetic(
-                lang="en",
-                searchLang="en",
+                lang="fr",
+                searchLang="fr",
                 matchMethod="contains",
                 name=content,
                 backendType="AthenaEmoji"
@@ -227,8 +227,8 @@ class CosmeticCommands(commands.Cog):
     async def contrail(self, ctx: fortnitepy.ext.commands.Context, *, content: str) -> None:
         try:
             cosmetic = await self.bot.fortnite_api.cosmetics.get_cosmetic(
-                lang="en",
-                searchLang="en",
+                lang="fr",
+                searchLang="fr",
                 matchMethod="contains",
                 name=content,
                 backendType="AthenaSkyDiveContrail"
@@ -542,8 +542,8 @@ class CosmeticCommands(commands.Cog):
         else:
             try:
                 cosmetic = await self.bot.fortnite_api.cosmetics.get_cosmetic(
-                    lang="en",
-                    searchLang="en",
+                    lang="fr",
+                    searchLang="fr",
                     matchMethod="contains",
                     name=content,
                     backendType="AthenaPickaxe"
@@ -759,8 +759,8 @@ class CosmeticCommands(commands.Cog):
     async def random(self, ctx: fortnitepy.ext.commands.Context, cosmetic_type: str = 'skin') -> None:
         if cosmetic_type == 'skin':
             all_outfits = await self.bot.fortnite_api.cosmetics.get_cosmetics(
-                lang="en",
-                searchLang="en",
+                lang="fr",
+                searchLang="fr",
                 backendType="AthenaCharacter"
             )
 
@@ -776,8 +776,8 @@ class CosmeticCommands(commands.Cog):
 
         elif cosmetic_type == 'backpack':
             all_backpacks = await self.bot.fortnite_api.cosmetics.get_cosmetics(
-                lang="en",
-                searchLang="en",
+                lang="fr",
+                searchLang="fr",
                 backendType="AthenaBackpack"
             )
 
@@ -793,8 +793,8 @@ class CosmeticCommands(commands.Cog):
 
         elif cosmetic_type == 'emote':
             all_emotes = await self.bot.fortnite_api.cosmetics.get_cosmetics(
-                lang="en",
-                searchLang="en",
+                lang="fr",
+                searchLang="fr",
                 backendType="AthenaDance"
             )
 
@@ -809,20 +809,20 @@ class CosmeticCommands(commands.Cog):
 
         elif cosmetic_type == 'all':
             all_outfits = await self.bot.fortnite_api.cosmetics.get_cosmetics(
-                lang="en",
-                searchLang="en",
+                lang="fr",
+                searchLang="fr",
                 backendType="AthenaCharacter"
             )
 
             all_backpacks = await self.bot.fortnite_api.cosmetics.get_cosmetics(
-                lang="en",
-                searchLang="en",
+                lang="fr",
+                searchLang="fr",
                 backendType="AthenaBackpack"
             )
 
             all_emotes = await self.bot.fortnite_api.cosmetics.get_cosmetics(
-                lang="en",
-                searchLang="en",
+                lang="fr",
+                searchLang="fr",
                 backendType="AthenaDance"
             )
 
@@ -894,8 +894,8 @@ class CosmeticCommands(commands.Cog):
             )
 
             cosmetic = await self.bot.fortnite_api.cosmetics.get_cosmetic(
-                lang="en",
-                searchLang="en",
+                lang="fr",
+                searchLang="fr",
                 matchMethod="contains",
                 name=content,
                 backendType="AthenaCharacter"
@@ -926,8 +926,8 @@ class CosmeticCommands(commands.Cog):
             )
 
             cosmetic = await self.bot.fortnite_api.cosmetics.get_cosmetic(
-                lang="en",
-                searchLang="en",
+                lang="fr",
+                searchLang="fr",
                 matchMethod="contains",
                 name=content,
                 backendType="AthenaCharacter"
@@ -961,8 +961,8 @@ class CosmeticCommands(commands.Cog):
         }
 
         set_items = await self.bot.fortnite_api.cosmetics.get_cosmetics(
-            lang="en",
-            searchLang="en",
+            lang="fr",
+            searchLang="fr",
             matchMethod="contains",
             set=content
         )
@@ -998,8 +998,8 @@ class CosmeticCommands(commands.Cog):
         # }
 
         cosmetic = await self.bot.fortnite_api.cosmetics.get_cosmetic(
-            lang="en",
-            searchLang="en",
+            lang="fr",
+            searchLang="fr",
             matchMethod="contains",
             name=cosmetic_name,
             backendType="AthenaCharacter"
@@ -1317,8 +1317,8 @@ class CosmeticCommands(commands.Cog):
     )
     async def tbd(self, ctx: fortnitepy.ext.commands.Context, skin: int = 0) -> None:
         cosmetics = await self.bot.fortnite_api.cosmetics.get_cosmetics(
-            lang="en",
-            searchLang="en",
+            lang="fr",
+            searchLang="fr",
             matchMethod="full",
             name="TBD",
             backendType="AthenaCharacter"
