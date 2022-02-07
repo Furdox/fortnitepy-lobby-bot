@@ -1,4 +1,4 @@
-<h1 align="center">PartyBot</h1>
+<h1 align="center">PartyBot by xMistt, modified by Furdox</h1>
 
 <p align="center">
     <a href="https://pepy.tech/project/partybotpackage" align="center">
