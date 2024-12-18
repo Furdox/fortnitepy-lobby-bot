@@ -4,4 +4,4 @@ crayons
 pypresence
 FortniteAPIAsync
 aiofiles
-cryptography==41.0.3
+cryptography==44.0.0
